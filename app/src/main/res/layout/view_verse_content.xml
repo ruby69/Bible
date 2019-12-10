@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+      android:id="@+id/layer"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_2x"
+        android:layout_marginLeft="@dimen/spacing_2x"
+        android:layout_marginStart="@dimen/spacing_2x"
+        android:layout_marginTop="@dimen/spacing_2x"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/info"
+        android:orientation="vertical">
+
+        <ScrollView
+          android:id="@+id/content1Layer"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:clipToPadding="false"
+          android:paddingBottom="@dimen/spacing_6x"
+          android:paddingLeft="@dimen/spacing_2x"
+          android:paddingStart="@dimen/spacing_2x"
+          android:scrollbars="vertical">
+
+          <TextView
+            android:id="@+id/content1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.3"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"/>
+        </ScrollView>
+
+        <ScrollView
+          android:id="@+id/content2Layer"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_marginTop="@dimen/spacing_2x"
+          android:layout_weight="1"
+          android:clipToPadding="false"
+          android:paddingBottom="@dimen/spacing_12x"
+          android:paddingLeft="@dimen/spacing_2x"
+          android:paddingStart="@dimen/spacing_2x"
+          android:paddingTop="@dimen/spacing_2x"
+          android:scrollbars="vertical">
+
+          <TextView
+            android:id="@+id/content2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.3"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+        </ScrollView>
+      </LinearLayout>
+
+      <com.like.LikeButton
+        android:id="@+id/like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        app:icon_size="20dp"
+        app:like_drawable="@drawable/ic_favorite_white_24dp"
+        app:unlike_drawable="@drawable/ic_favorite_border_white_24dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+      android:id="@+id/menus"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/controlLayer"
+      android:layout_alignParentEnd="true"
+      android:layout_marginEnd="15dp"
+      android:gravity="end"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+          android:id="@+id/share2Label"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/spacing_1x"
+          android:background="@drawable/options_label_bg"
+          android:paddingBottom="@dimen/spacing_quarter"
+          android:paddingEnd="@dimen/spacing_2x"
+          android:paddingStart="@dimen/spacing_2x"
+          android:paddingTop="@dimen/spacing_quarter"
+          android:text="@string/label_share_verse"
+          android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+          android:textColor="@android:color/white"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/share2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_share_black_24dp"
+          app:backgroundTint="@color/grey_light"
+          app:elevation="0dp"
+          app:fabSize="mini"
+          app:pressedTranslationZ="0dp"
+          app:rippleColor="@color/colorAccent"
+          app:useCompatPadding="true"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+          android:id="@+id/withBibleLabel"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/spacing_1x"
+          android:background="@drawable/options_label_bg"
+          android:paddingBottom="@dimen/spacing_quarter"
+          android:paddingEnd="@dimen/spacing_2x"
+          android:paddingStart="@dimen/spacing_2x"
+          android:paddingTop="@dimen/spacing_quarter"
+          android:text="@string/label_with_bible"
+          android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+          android:textColor="@android:color/white"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/withBible"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_speaker_notes_black_24dp"
+          app:backgroundTint="@color/grey_light"
+          app:elevation="0dp"
+          app:fabSize="mini"
+          app:pressedTranslationZ="0dp"
+          app:rippleColor="@color/colorAccent"
+          app:useCompatPadding="true"/>
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+      android:id="@+id/controlLayer"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true">
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/prev"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_navigate_before_black_24dp"
+          app:backgroundTint="@color/grey_light"
+          app:elevation="0dp"
+          app:fabSize="mini"
+          app:pressedTranslationZ="0dp"
+          app:rippleColor="@color/colorAccent"
+          app:useCompatPadding="true"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/kakao"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/spacing_4x"
+          android:layout_marginStart="@dimen/spacing_4x"
+          android:src="@drawable/ic_kakao"
+          android:visibility="gone"
+          app:backgroundTint="@color/yellow1"
+          app:elevation="0dp"
+          app:fabSize="mini"
+          app:pressedTranslationZ="0dp"
+          app:rippleColor="@color/yellow"
+          app:useCompatPadding="true"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/share1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/spacing_4x"
+          android:layout_marginStart="@dimen/spacing_4x"
+          android:src="@drawable/ic_share_black_24dp"
+          android:visibility="gone"
+          app:backgroundTint="@color/colorPrimaryLight"
+          app:elevation="0dp"
+          app:fabSize="mini"
+          app:pressedTranslationZ="0dp"
+          app:rippleColor="@color/colorAccent"
+          app:useCompatPadding="true"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/next"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_navigate_next_black_24dp"
+          app:backgroundTint="@color/grey_light"
+          app:elevation="0dp"
+          app:fabSize="mini"
+          app:pressedTranslationZ="0dp"
+          app:rippleColor="@color/colorAccent"
+          app:useCompatPadding="true"/>
+      </LinearLayout>
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/optionsMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:src="@drawable/ic_add_black_24dp"
+        android:tint="@android:color/white"
+        app:elevation="0dp"
+        app:pressedTranslationZ="0dp"
+        app:useCompatPadding="true"/>
+
+    </RelativeLayout>
+
+  </RelativeLayout>
+</merge>

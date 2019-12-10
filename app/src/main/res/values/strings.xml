@@ -1,0 +1,72 @@
+<resources>
+  <string name="app_name" translatable="false">성경일독</string>
+  <string name="admob_app_id" translatable="false">xxxxxxxxxx</string>
+  <string name="admob_banner_unit_id" translatable="false">xxxxxxxxxx</string>
+  <string name="admob_reward_unit_id" translatable="false">xxxxxxxxxx</string>
+
+  <string name="nav_title_bible" translatable="false">성경 일독</string>
+  <string name="nav_title_liked" translatable="false">좋아요 말씀</string>
+  <string name="nav_title_lockscreen" translatable="false">켜자마자 일독</string>
+  <string name="nav_title_settings" translatable="false">설정</string>
+
+  <string name="message_db_fail" translatable="false">이런..\n데이터베이스 초기화에 실패하였습니다.</string>
+  <string name="message_wait" translatable="false">잠시만 기다려 주세요.</string>
+  <string name="message_progress_initialize" translatable="false">초기화중</string>
+  <string name="message_progress_update" translatable="false">업데이트중</string>
+  <string name="message_confirm_lockscreen" translatable="false">\"켜자마자 일독\"을 시작합니다. \"설정\"에서 해제할 수 있습니다.</string>
+  <string name="message_copy_checked" translatable="false">선택한 말씀들을 복사하였습니다.</string>
+  <string name="message_nochecked" translatable="false">성경말씀을 먼저 선택해주세요.</string>
+  <string name="message_no_ads" translatable="false">광고 이후, 최소 한시간 동안 모든 배너광고를 제거합니다.</string>
+
+  <string name="label_font_tiny" translatable="false">아주 작게</string>
+  <string name="label_font_small" translatable="false">작게</string>
+  <string name="label_font_normal" translatable="false">보통</string>
+  <string name="label_font_large" translatable="false">크게</string>
+  <string name="label_font_scale" translatable="false">글자 크기</string>
+  <string name="label_font_tiny1" translatable="false">아주 작음</string>
+  <string name="label_font_small1" translatable="false">작음</string>
+  <string name="label_font_normal1" translatable="false">보통</string>
+  <string name="label_font_large1" translatable="false">큼</string>
+
+  <string name="label_with_bible" translatable="false">같이보기</string>
+  <string name="label_share_verse" translatable="false">말씀공유</string>
+  <string name="label_copy_checked" translatable="false">선택말씀 복사</string>
+  <string name="label_share_checked" translatable="false">선택말씀 공유</string>
+  <string name="label_verse_checked" translatable="false">성경말씀</string>
+  <string name="label_cancel_checked" translatable="false">선택취소</string>
+  <string name="label_use" translatable="false">사용</string>
+  <string name="label_not_use" translatable="false">미사용</string>
+  <string name="label_lockscreen" translatable="false">켜자마자 일독</string>
+  <string name="label_lockscreen_noti_title" translatable="false">켜자마자 일독중</string>
+  <string name="label_lockscreen_noti_content" translatable="false">켜자마자 일독을 끝내시려면 누르세요.</string>
+  <string name="label_edition" translatable="false">성경 전서</string>
+  <string name="label_font" translatable="false">글자 크기</string>
+  <string name="label_edition_change" translatable="false">성경 선택: </string>
+  <string name="label_change_fontsize" translatable="false">글자 크기 선택</string>
+  <string name="label_change_edition" translatable="false">성경 선택 </string>
+
+  <string name="label_onlock_start" translatable="false">네, \"켜자마자 일독\" 미리보기를 시작합니다.</string>
+  <string name="label_lock_off" translatable="false">네, 지금부터 5분간 켜자마자 일독을 중지합니다.</string>
+  <string name="label_finish" translatable="false">네, 지금 종료합니다</string>
+  <string name="ok" translatable="false">OK</string>
+  <string name="label_yes" translatable="false">네</string>
+  <string name="label_no" translatable="false">아니오</string>
+  <string name="label_confirm" translatable="false">확인</string>
+  <string name="label_cancel" translatable="false">취소</string>
+  <string name="label_continue" translatable="false">계속 진행 하시겠습니까?</string>
+  <string name="label_remove_ads" translatable="false">광고제거</string>
+
+  <string name="url_check_http" translatable="false">https://clients3.google.com/generate_204</string>
+  <string name="url_studylock" translatable="false">https://xdkq9.app.goo.gl/qLo3</string>
+
+  <string name="db_name" translatable="false">bible</string>
+  <integer name="db_version">3</integer>
+
+  <string name="sql_bible_insert" translatable="false">INSERT INTO `Bible` (`bibleUid`,`old`,`ntb`, `ntbAbb`, `ntbChapter`, `cte`, `cteAbb`, `cteChapter`, `koTitle`, `koAbb`, `koChapter`, `vul`, `vulAbb`, `vulChapter`, `nab`, `nabAbb`, `nabChapter`, `kjv`, `kjvAbb`, `kjvChapter`, `niv`, `nivAbb`, `nivChapter`, `hebTkv`, `hebTkvAbb`, `hebTkvChapter`) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</string>
+  <string name="sql_content_insert" translatable="false">INSERT INTO `Content` (`bibleUid`,`chapter`,`verse`,`ntb`,`cte`,`krv`,`hrv`,`tkv`,`nab`,`kjv`,`niv`,`vul`,`hebTkv`) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</string>
+
+  <string name="sql_backup_content_update" translatable="false">INSERT INTO ContentUpdate (contentUid, liked) SELECT contentUid, liked FROM Content WHERE liked=1</string>
+  <string name="sql_restore_content_update1" translatable="false">SELECT * FROM ContentUpdate</string>
+  <string name="sql_restore_content_update2" translatable="false">UPDATE Content SET liked=? WHERE contentUid = ?</string>
+
+</resources>

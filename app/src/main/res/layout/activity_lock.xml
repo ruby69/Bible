@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <RelativeLayout
+    android:id="@+id/layer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/adLayer">
+
+    <com.appskimo.app.bible.ui.view.VerseContentView_
+      android:id="@+id/verseContentView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="@dimen/spacing_4x"/>
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/spacing_1x"
+      android:orientation="horizontal">
+
+      <ImageButton
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:padding="@dimen/spacing_1x"
+        android:src="@drawable/ic_menu_black_24dp"
+        android:tint="@android:color/white"
+        android:visibility="gone"/>
+
+      <ImageButton
+        android:id="@+id/lockOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:background="?android:selectableItemBackground"
+        android:padding="@dimen/spacing_1x"
+        android:src="@drawable/ic_speaker_notes_off_black_24dp"
+        android:tint="@android:color/white"
+        android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <Spinner
+      android:id="@+id/chapterSpinner"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:padding="@dimen/spacing_half"/>
+
+    <Spinner
+      android:id="@+id/bibleSpinner"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_marginEnd="@dimen/spacing_8x"
+      android:padding="@dimen/spacing_half"/>
+
+  </RelativeLayout>
+
+  <RelativeLayout
+    android:id="@+id/adLayer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:minHeight="@dimen/spacing_3x">
+
+    <com.google.android.gms.ads.AdView
+      android:id="@+id/adBanner"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      app:adSize="BANNER"
+      app:adUnitId="@string/admob_banner_unit_id"/>
+
+  </RelativeLayout>
+
+</RelativeLayout>

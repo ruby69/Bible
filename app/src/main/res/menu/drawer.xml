@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <group
+    android:id="@+id/grp1"
+    android:checkableBehavior="single">
+
+    <item
+      android:id="@+id/menuBible"
+      android:checked="true"
+      android:icon="@drawable/ic_view_stream_black_24dp"
+      android:title="@string/nav_title_bible"/>
+
+    <item
+      android:id="@+id/menuLiked"
+      android:icon="@drawable/ic_favorite_border_black_24dp"
+      android:title="@string/nav_title_liked"/>
+
+  </group>
+
+  <group
+    android:id="@+id/grp2"
+    android:checkableBehavior="single">
+
+    <item
+      android:id="@+id/menuLockscreen"
+      android:checkable="false"
+      android:icon="@drawable/ic_lightbulb_outline_black_24dp"
+      android:title="@string/nav_title_lockscreen"/>
+
+    <item
+      android:id="@+id/menuSettings"
+      android:icon="@drawable/ic_settings_black_24dp"
+      android:title="@string/nav_title_settings"/>
+  </group>
+
+</menu>
